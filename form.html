@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111827">
+  <title>Generator Caption — NovaStore</title>
+  <link rel="stylesheet" href="public/css/index.css">
+  <link rel="stylesheet" href="public/css/form.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a class="brand" href="index.html"><span class="brand-mark">N</span> NovaStore</a>
+    <div class="nav-links">
+      <a href="index.html">Etalase</a>
+      <a href="form.html" aria-current="page">Generator Caption</a>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <span class="eyebrow"><span class="live-dot"></span> CREATIVE TOOL / 002</span>
+    <h1>Caption yang menarik,<br><span>dalam beberapa detik.</span></h1>
+    <p>Masukkan detail produk dan pilih gaya bahasa yang sesuai dengan tokomu.</p>
+  </header>
+
+  <main class="form-layout">
+    <aside class="form-aside">
+      <div class="aside-icon">✦</div>
+      <span class="section-kicker">TIPS KECIL</span>
+      <h2>Cerita yang baik membuat produk lebih berkesan.</h2>
+      <p>Gunakan nama produk yang jelas, masukkan harga yang tepat, lalu pilih template yang sesuai dengan calon pembelimu.</p>
+
+      <div class="tip-line"><span>01</span> Isi detail produk</div>
+      <div class="tip-line"><span>02</span> Pilih gaya caption</div>
+      <div class="tip-line"><span>03</span> Salin hasilnya</div>
+    </aside>
+
+    <form id="form" class="caption-form" novalidate>
+      <div class="form-title">
+        <span class="section-kicker">MULAI MENULIS</span>
+        <h2>Generator caption</h2>
+        <p>Lengkapi informasi produk di bawah ini.</p>
+      </div>
+
+      <label for="nama">Nama produk</label>
+      <input type="text" id="nama"
+        placeholder="Contoh: Kopi Susu Gula Aren"
+        aria-describedby="nama-error">
+      <small class="error" id="nama-error" aria-live="polite"></small>
+
+      <label for="harga">Harga produk (Rupiah)</label>
+      <div class="price-input">
+        <span>Rp</span>
+        <input type="number" id="harga" placeholder="25000"
+          min="1000" aria-describedby="harga-error">
+      </div>
+      <small class="error" id="harga-error" aria-live="polite"></small>
+
+      <label for="template">Gaya caption</label>
+      <select id="template">
+        <option value="promo">🔥 Promo — persuasif dan meriah</option>
+        <option value="santai">✨ Santai — akrab dan kasual</option>
+        <option value="formal">✦ Formal — profesional</option>
+      </select>
+
+      <button type="submit" class="generate-button">
+        Buat caption <span aria-hidden="true">↗</span>
+      </button>
+
+      <div class="output-heading">
+        <label for="caption">Hasil caption</label>
+        <span>TEKS SIAP PAKAI</span>
+      </div>
+
+      <textarea id="caption" rows="12" readonly
+        placeholder="Caption yang kamu buat akan muncul di sini..."></textarea>
+
+      <button type="button" id="copyButton" class="copy-button">
+        Salin caption
+      </button>
+
+      <p id="copyStatus" class="copy-status" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <footer>
+    <a class="brand footer-brand" href="index.html">
+      <span class="brand-mark">N</span> NovaStore
+    </a>
+    <span>Caption generator · HTML, CSS & JavaScript native</span>
+  </footer>
+
+  <script src="public/js/form.js"></script>
+</body>
+</html>

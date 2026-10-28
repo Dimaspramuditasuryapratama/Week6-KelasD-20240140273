@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111827">
+  <title>NovaStore — Etalase Produk</title>
+  <link rel="stylesheet" href="public/css/index.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a class="brand" href="index.html"><span class="brand-mark">N</span> NovaStore</a>
+    <div class="nav-links">
+      <a href="index.html" aria-current="page">Etalase</a>
+      <a href="form.html">Generator Caption</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-content">
+      <span class="eyebrow"><span class="live-dot"></span> KATALOG PRODUK DIGITAL</span>
+      <h1>Temukan produk<br><span>favoritmu.</span></h1>
+      <p>Jelajahi berbagai pilihan produk dengan data yang diambil langsung dari DummyJSON API.</p>
+      <a class="hero-link" href="#etalase">Jelajahi produk <span aria-hidden="true">↓</span></a>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="orb orb-one"></div>
+      <div class="orb orb-two"></div>
+      <div class="hero-card">
+        <span>PRODUCTS</span>
+        <strong>01</strong>
+        <small>Discover something good.</small>
+      </div>
+      <div class="floating-chip">✦ Pilihan hari ini</div>
+    </div>
+  </header>
+
+  <main id="etalase" class="page-main">
+    <section class="section-heading">
+      <div>
+        <span class="section-kicker">KATALOG / 001</span>
+        <h2>Etalase produk</h2>
+        <p>Pilih produk yang menarik perhatianmu.</p>
+      </div>
+      <div class="result-count" id="resultCount">Memuat produk...</div>
+    </section>
+
+    <section class="toolbar" aria-label="Pencarian dan filter produk">
+      <label class="search-box">
+        <span aria-hidden="true">⌕</span>
+        <input type="search" id="searchInput"
+          placeholder="Cari nama produk..."
+          aria-label="Cari nama produk">
+      </label>
+
+      <label class="select-box">
+        <span>Kategori</span>
+        <select id="categorySelect" aria-label="Filter kategori">
+          <option value="">Semua kategori</option>
+        </select>
+      </label>
+
+      <button type="button" id="reloadButton" class="reload-button">
+        <span class="reload-icon" aria-hidden="true">↻</span>
+        Muat ulang
+      </button>
+    </section>
+
+    <div id="status" class="status" role="status" aria-live="polite">
+      Menyiapkan katalog produk...
+    </div>
+
+    <section class="grid" id="productGrid" aria-label="Daftar produk"></section>
+  </main>
+
+  <footer>
+    <a class="brand footer-brand" href="index.html">
+      <span class="brand-mark">N</span> NovaStore
+    </a>
+    <span>Data produk dari DummyJSON API · Dibuat dengan HTML, CSS & JavaScript</span>
+  </footer>
+
+  <script src="public/js/index.js"></script>
+</body>
+</html>
